@@ -1,45 +1,35 @@
 # Tasks
 
-Pick one case per group. The cases don't depend on each other. Case 1 starts with **Step 0**; cases 2 and 3 start straight away.
+Santa and his company, Santa Inc., have plenty of experience planning Christmas. But Santa is getting tired of all the stress and manual work in the last weeks before Christmas Eve. One of his advisers has suggested building a data platform, to automate many of the processes and to give better insight for better decisions. Santa also finds AI exciting, and wants to prepare the company to use more of it.
+
+So Santa Inc. has decided to spend some of its budget on KPMG and a new data platform, preferably on Databricks. **Your group is the KPMG team.**
+
+Pick one case per group. The cases don't depend on each other.
 
 All the raw files are in **Catalog → workspace → santa → raw** (see *Where to find things* in the README).
-
----
-
-## Step 0 (case 1): one wish list
-
-Children sent their wishes in two ways: by email, and by paper letter that the elves scanned. Before you can answer anything, you need **one clean wish list**.
-
-**Files:** all files in the `wishes/email` folder, `wishes/letters/scanned_letters.csv`, `toys.parquet`, `postcodes.csv`
-
-1. Find the files in **Catalog → workspace → santa → raw → wishes**. Ask Genie to load the emails and the letters into two raw tables, and look at a few rows of each.
-2. An email can hold several wishes. Turn it into one row per wish.
-3. Make the two tables look the same: same column names, same date format.
-4. Match the toy names children wrote to the official toy list. Children don't spell well.
-5. Stack the two tables into one, with a column saying where each wish came from.
-6. Some children sent both an email and a letter. Santa gives each child **one** gift: their #1 wish. Keep one row per child.
-7. The emails contain personal ID numbers. Should they be in your final table?
-
-Stuck after 40 minutes? Ask Genie to load `catchup/wishes_clean.parquet` and move on to your case.
 
 ---
 
 ## Case 1: Are we on schedule, or should we make other toys?
 
 > "Last year we ran out of the toys children wanted most. Today is 1 December. Will we have enough of every toy by 22 December, or should we change what the workshops make?" — Head of Production, Santa Inc.
+>
+> "Every child gets one gift: the toy they wanted most." — Santa
 
-**Files:** your wish list from step 0, all files in the `production` folder, `workshops.csv`, `toys.parquet`
+- **Step 1: Decide what data to use.** You don't need every file.
+- **Step 2: Load the data and look at it.** How many emails, letters and production rows are there? Does anything look wrong?
+- **Step 3: Combine the emails and the letters into one wish list.** Children don't always spell toy names the way Santa's toy list does.
+- **Step 4: Decide which wish each child gets.**
+- **Step 5: Decide whether you trust the production numbers.**
+- **Step 6: Decide which columns to connect.** How do you compare what children wished for with what the workshops have made?
+- **Step 7: Make a dashboard that answers the business questions:**
+  1. Which toys do children want most?
+  2. Which toys are we short of, and which do we have too many of?
+  3. At the current pace, will we have enough of every toy by 22 December?
+  4. Where in Norway are the children who won't get their wish?
+  5. Which workshop should switch to which toy to close the gap?
 
-1. Load and clean the production data. Is every row really one day, one workshop, one toy?
-2. Count #1 wishes per toy, and toys made so far per toy.
-3. Compare them: which toys are short, and which do we have too many of?
-4. Dashboard: shortage per toy, and a map of where the unfulfilled wishes are.
-5. Pitch: is Santa on schedule? What should change?
-
-**Going further**
-
-- At the current production rate, which toys will still be short on 22 December?
-- Each toy takes a set number of minutes to make. Which workshop should switch to which toy to close the gap?
+**Stuck after step 4?** Ask Genie to load `catchup/wishes_clean.parquet`. It has one row per child with their #1 wish.
 
 ---
 
@@ -48,7 +38,7 @@ Stuck after 40 minutes? Ask Genie to load `catchup/wishes_clean.parquet` and mov
 > "We have warehouses in Oslo, Bergen and Trondheim, and some children wait far too long for their gifts. We can afford one more warehouse. Where should it go?" — Head of Logistics, Santa Inc.
 
 - **Step 1: Decide what data to use.** You don't need every file. Which ones tell you where children and warehouses are?
-- **Step 2: Load the data and look at it.** How many emails and letters are there, and what looks wrong?
+- **Step 2: Load the data and look at it.** How many emails and letters are there? Does anything look wrong?
 - **Step 3: Combine the emails and the letters into one list of children.** Some children sent both, and each child should only count once.
 - **Step 4: Decide which columns to connect.** How do you get from a child to a place on the map? And from a warehouse to a place on the map?
 - **Step 5: Decide what to do with children you can't place.** How many are there, and why can't they be placed?
