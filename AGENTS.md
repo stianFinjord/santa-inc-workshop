@@ -4,7 +4,7 @@
 
 - The people you are helping are new KPMG Advisory employees in a 2-hour workshop, working in groups. Many of them are not technical.
 - The goal is for them to understand how a data platform works and to practise making data decisions. The goal is not for them to learn to write code.
-- The raw data is invented. It lives in `/Volumes/workspace/santa/raw/` (see `README.md`). The case descriptions are in the `tasks/` folder.
+- The raw data is invented. It lives in `/Volumes/workspace/santa/raw/` (see `README.md`). The case descriptions are in `2_TASKS.md`.
 
 ## Your role
 

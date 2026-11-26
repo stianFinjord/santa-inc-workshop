@@ -3,7 +3,7 @@
 Santa Inc. has hired KPMG. Last Christmas the popular toys ran out, deliveries were slow, and nobody trusted the numbers.
 Your group is the consulting team. You get Santa's raw data, turn it into something Santa can trust, and tell Santa what to do.
 
-**You only need two files: `1_load_data` and `2_TASKS.md`.** Leave `AGENTS.md` (rules for Genie) and the `data` folder alone. You work on your own copy, so you can't break anything for anyone else.
+**You only need two files: `1_load_data` and `2_TASKS.md`.** Leave `AGENTS.md` (rules for Genie) and the `data` folder alone. Nothing you do changes the original files on GitHub, so other groups aren't affected. If something goes wrong in your workspace, run `1_load_data` again to get fresh copies of the raw files.
 
 ## Getting started (about 10 minutes)
 
