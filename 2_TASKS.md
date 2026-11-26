@@ -1,12 +1,12 @@
 # Tasks
 
-Pick one case per group. Cases 1 and 2 both start with **Step 0**. Case 3 starts straight away.
+Pick one case per group. The cases don't depend on each other. Case 1 starts with **Step 0**; cases 2 and 3 start straight away.
 
 All the raw files are in **Catalog → workspace → santa → raw** (see *Where to find things* in the README).
 
 ---
 
-## Step 0 (cases 1 and 2): one wish list
+## Step 0 (case 1): one wish list
 
 Children sent their wishes in two ways: by email, and by paper letter that the elves scanned. Before you can answer anything, you need **one clean wish list**.
 
@@ -47,18 +47,21 @@ Stuck after 40 minutes? Ask Genie to load `catchup/wishes_clean.parquet` and mov
 
 > "We have warehouses in Oslo, Bergen and Trondheim, and some children wait far too long for their gifts. We can afford one more warehouse. Where should it go?" — Head of Logistics, Santa Inc.
 
-**Files:** your wish list from step 0, `warehouses.csv`, `candidate_cities.csv`, `postcodes.csv`
+- **Step 1: Decide what data to use.** You don't need every file. Which ones tell you where children and warehouses are?
+- **Step 2: Load the data and look at it.** How many emails and letters are there, and what looks wrong?
+- **Step 3: Combine the emails and the letters into one list of children.** Some children sent both, and each child should only count once.
+- **Step 4: Decide which columns to connect.** How do you get from a child to a place on the map? And from a warehouse to a place on the map?
+- **Step 5: Decide what to do with children you can't place.** How many are there, and why can't they be placed?
+- **Step 6: Calculate the distance from each child to their nearest warehouse.** We only have straight-line distance, not road distance. Keep that in mind for your answer.
+- **Step 7: Decide what "worst served" means.** For example: the most children far away, the longest average distance, or the most kilometres in total.
+- **Step 8: Make a dashboard that answers the business questions:**
+  1. Where do the children live, and where are Santa's warehouses today?
+  2. Which regions are worst served today?
+  3. How many children live more than 300 km from a warehouse?
+  4. Which of the 5 candidate cities should get the new warehouse, and how much does it help?
+  5. Would your answer change if you measured "worst served" differently?
 
-1. Give every wish a location by joining it to the postcode list. Do all postcodes match?
-2. Put the #1 wishes and the three warehouses on one map.
-3. For each region, count wishes and find how far away the nearest warehouse is.
-4. Dashboard: map of wishes and warehouses, and a ranking of the regions that are worst served.
-5. Pitch: where should the new warehouse go, and why?
-
-**Going further**
-
-- Calculate each child's distance to their nearest warehouse, and add it up per region.
-- Test the 5 candidate cities: which one cuts the total distance the most?
+**Stuck after step 5?** Ask Genie to load `catchup/wishes_clean.parquet`. It has one row per child, with location, so you can go straight to step 6.
 
 ---
 
