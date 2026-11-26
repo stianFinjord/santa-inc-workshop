@@ -16,18 +16,23 @@ All the raw files are in **Catalog → workspace → santa → raw** (see *Where
 >
 > "Every child gets one gift: the toy they wanted most." — Santa
 
+**The business questions Santa wants answered:**
+
+1. Which toys do children want most?
+2. Which toys are we short of, and which do we have too many of?
+3. At the current pace, will we have enough of every toy by 22 December?
+4. Where in Norway are the children who won't get their wish?
+5. Which workshop should switch to which toy to close the gap?
+
+**How to get there:**
+
 - **Step 1: Decide what data to use.** You don't need every file.
 - **Step 2: Load the data and look at it.** How many emails, letters and production rows are there? Does anything look wrong?
 - **Step 3: Combine the emails and the letters into one wish list.** Children don't always spell toy names the way Santa's toy list does.
 - **Step 4: Decide which wish each child gets.**
 - **Step 5: Decide whether you trust the production numbers.**
 - **Step 6: Decide which columns to connect.** How do you compare what children wished for with what the workshops have made?
-- **Step 7: Make a dashboard that answers the business questions:**
-  1. Which toys do children want most?
-  2. Which toys are we short of, and which do we have too many of?
-  3. At the current pace, will we have enough of every toy by 22 December?
-  4. Where in Norway are the children who won't get their wish?
-  5. Which workshop should switch to which toy to close the gap?
+- **Step 7: Make a dashboard that answers the business questions.**
 
 **Stuck after step 4?** Ask Genie to load `catchup/wishes_clean.parquet`. It has one row per child with their #1 wish.
 
@@ -37,19 +42,24 @@ All the raw files are in **Catalog → workspace → santa → raw** (see *Where
 
 > "We have warehouses in Oslo, Bergen and Trondheim, and some children wait far too long for their gifts. We can afford one more warehouse. Where should it go?" — Head of Logistics, Santa Inc.
 
+**The business questions Santa wants answered:**
+
+1. Where do the children live, and where are Santa's warehouses today?
+2. Which regions are worst served today?
+3. How many children live more than 300 km from a warehouse?
+4. Which of the 5 candidate cities should get the new warehouse, and how much does it help?
+5. Would your answer change if you measured "worst served" differently?
+
+**How to get there:**
+
 - **Step 1: Decide what data to use.** You don't need every file. Which ones tell you where children and warehouses are?
 - **Step 2: Load the data and look at it.** How many emails and letters are there? Does anything look wrong?
-- **Step 3: Combine the emails and the letters into one list of children.** Some children sent both, and each child should only count once.
+- **Step 3: Combine the emails and the letters into one list of children.**
 - **Step 4: Decide which columns to connect.** How do you get from a child to a place on the map? And from a warehouse to a place on the map?
 - **Step 5: Decide what to do with children you can't place.** How many are there, and why can't they be placed?
 - **Step 6: Calculate the distance from each child to their nearest warehouse.** We only have straight-line distance, not road distance. Keep that in mind for your answer.
 - **Step 7: Decide what "worst served" means.** For example: the most children far away, the longest average distance, or the most kilometres in total.
-- **Step 8: Make a dashboard that answers the business questions:**
-  1. Where do the children live, and where are Santa's warehouses today?
-  2. Which regions are worst served today?
-  3. How many children live more than 300 km from a warehouse?
-  4. Which of the 5 candidate cities should get the new warehouse, and how much does it help?
-  5. Would your answer change if you measured "worst served" differently?
+- **Step 8: Make a dashboard that answers the business questions.**
 
 **Stuck after step 5?** Ask Genie to load `catchup/wishes_clean.parquet`. It has one row per child, with location, so you can go straight to step 6.
 
