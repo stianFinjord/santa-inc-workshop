@@ -1,8 +1,8 @@
 # Tasks
 
-Santa and his company, Santa Inc., have plenty of experience planning Christmas. But Santa is getting tired of all the stress and manual work in the last weeks before Christmas Eve. One of his advisers has suggested building a data platform, to automate many of the processes and to give better insight for better decisions. Santa also finds AI exciting, and wants to prepare the company to use more of it.
+Julenissen og bedriften Santa Inc har god erfaring med å planlegge jul, men han begynner å gå lei av alt stresset og manuelt arbeid siste ukene mot julaften. En av rådgiverne hans har foreslått å utvikle en dataplattform for å automatisere flere av prosessene, samt å gi bedre innsikt for å kunne ta bedre avgjørelser. Han synes også AI er spennende og ønsker å forberede bedriften for å ta i bruk mer av dette. Santa Inc har bestemt seg for å bruke litt av budsjettet på KPMG og utvikling av en dataplattform, helst med Databricks.
 
-So Santa Inc. has decided to spend some of its budget on KPMG and a new data platform, preferably on Databricks. **Your group is the KPMG team.**
+**Your group is the KPMG team.**
 
 Pick one case per group. The cases don't depend on each other.
 
