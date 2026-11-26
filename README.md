@@ -3,6 +3,8 @@
 Santa Inc. has hired KPMG. Last Christmas the popular toys ran out, deliveries were slow, and nobody trusted the numbers.
 Your group is the consulting team. You get Santa's raw data, turn it into something Santa can trust, and tell Santa what to do.
 
+**You only need two files: `1_load_data` and `2_TASKS.md`.** Leave `AGENTS.md` (rules for Genie) and the `data` folder alone. You work on your own copy, so you can't break anything for anyone else.
+
 ## Getting started (about 10 minutes)
 
 1. **Log in** to your group's Databricks Free Edition workspace.
@@ -10,13 +12,13 @@ Your group is the consulting team. You get Santa's raw data, turn it into someth
 2. **Get this repo into Databricks.** In the menu on the left, click **Workspace**, then **Create → Git folder**. Paste the URL of this repo and click **Create**.
    <!-- SCREENSHOT: images/01_create_git_folder.png – the Create Git folder dialog with the repo URL filled in -->
 
-3. **Load the data.** Open the notebook `00_setup` in the new folder and click **Run all** at the top. Wait until it prints **All set!** (a minute or two).
-   <!-- SCREENSHOT: images/02_run_setup.png – the 00_setup notebook with Run all highlighted and "All set!" in the output -->
+3. **Load the data.** Open the notebook `1_load_data` in the new folder and click **Run all** at the top. Wait until it prints **All set!** (a minute or two).
+   <!-- SCREENSHOT: images/02_load_data.png – the 1_load_data notebook with Run all highlighted and "All set!" in the output -->
 
 4. **Create your working notebook.** In the `santa-inc-workshop` folder, click **Create → Notebook**. It must be *inside* this folder, otherwise Genie won't follow the workshop rules.
    <!-- SCREENSHOT: images/03_create_notebook.png – Create → Notebook inside the santa-inc-workshop folder -->
 
-5. **Open Genie** (see *Working with Genie* below), read your case in `TASKS.md`, and start.
+5. **Open Genie** (see *Working with Genie* below), read your case in `2_TASKS.md`, and start.
 
 If something doesn't work, ask a facilitator. Don't spend more than five minutes stuck on setup.
 

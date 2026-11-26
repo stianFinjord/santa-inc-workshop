@@ -1,11 +1,11 @@
 # Databricks notebook source
 # MAGIC %md
-# MAGIC # Setup: get Santa's data ready
+# MAGIC # Step 1: load Santa's data
 # MAGIC
 # MAGIC Run this notebook **once**: click **Run all** at the top. It takes a minute or two.
 # MAGIC
 # MAGIC It creates a place for the data (a *volume*) and copies all the raw files from this repo into it.
-# MAGIC When it prints **All set!**, go back to the README, create your working notebook, and open `TASKS.md`.
+# MAGIC When it prints **All set!**, go back to the README, create your working notebook, and open `2_TASKS.md`.
 
 # COMMAND ----------
 
@@ -53,4 +53,4 @@ for item in sorted(os.listdir(target)):
 
 print(f"\nAll set! Use this path in your queries: {target}/")
 if CATALOG != "workspace":
-    print(f"Note: the README and TASKS.md say /Volumes/workspace/santa/raw/. Your data is in {target}/ instead.")
+    print(f"Note: the README and 2_TASKS.md say /Volumes/workspace/santa/raw/. Your data is in {target}/ instead.")
